@@ -1,3 +1,5 @@
+
+
 @media (min-width: 480px) {
   
   .container {
@@ -6,23 +8,42 @@
   }
 }
 
-@media (min-width: 480px) and (max-width: 959px) {
+@media (min-width: 480px) and (max-width: 640px) {
   
   .card {
+    width: 50%;
+  }
+  .card:nth-child(3n){
+    width: 100%;
+  }
+}
+@media (min-width: 641px) and (max-width: 959px) {
+  
+  .card {
+    width: 33.33%;
+  }
+  .card:nth-child(5n + 1), .card:nth-child(5n + 1) + .card {
     width: 50%;
   }
 }
 
 @media (min-width: 960px) and (max-width: 1280px) {
-  
-  .card {
+  .card:nth-child(6n + 5), .card:nth-child(6n + 5) + .card {
+    width: 50%;
+  }
+  .card, .card:nth-child(12) ~ .card {
     width: 25%;
   }
 }
 
 @media (min-width: 1281px) {
-  
   .card {
     width: 20%;
+  }
+  .card:nth-child(8n + 6), .card:nth-child(8n + 7), .card:nth-child(8n + 8) {
+    width: 33.33%;
+  }
+ .card:nth-child(16) ~ .card {
+    width: 25%;
   }
 }
